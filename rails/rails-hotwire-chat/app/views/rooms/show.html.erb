@@ -3,15 +3,6 @@
 <%= turbo_stream_from @room %>
 
 <%= turbo_frame_tag "room" do %>
-  <%
-=begin%>
- <p>
-    <strong>Name:</strong>
-    <%= @room.name %>
-  </p> 
-<%
-=end%>
-
   <%= render @room %>
 
   <div>
