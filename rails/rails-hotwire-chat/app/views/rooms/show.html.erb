@@ -1,10 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<%= turbo_stream_from @room %>
+
 <%= turbo_frame_tag "room" do %>
-  <p>
+  <%
+=begin%>
+ <p>
     <strong>Name:</strong>
     <%= @room.name %>
-  </p>
+  </p> 
+<%
+=end%>
+
+  <%= render @room %>
 
   <div>
     <%= link_to "Edit", edit_room_path(@room) %> |

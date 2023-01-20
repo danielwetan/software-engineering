@@ -1,1 +1,7 @@
-<%= turbo_stream.append "messages", @message %>
+<%
+=begin%>
+ <%= turbo_stream.append "messages", @message %> 
+<%
+=end%>
+
+<% # Return handled by cable %>
