@@ -18,3 +18,8 @@ turbo-frame {
   display: block;
   border: 1px solid blue;
 }
+
+.turbo-progress-bar {
+  height: 5px;
+  background-color: gray;
+}
