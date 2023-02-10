@@ -28,3 +28,30 @@ Project Structure
 - An RSpec file ends with a '_spec.rb' extension that matches the file it is testing
 - Example: A Knight class in 'knight.rb' should have a 'knight_spec.rb' file
 
+---
+Test Pyramid
+   /                     \
+  / E2E Test (UI Testing) \
+ / Integration Test        \
+/ Unit Test                 \
+
+Types of Tests
+- Unit tests focus on individual units of code in the program (a single class, module, object, or method)
+  - Elements are tested in isolation; the program is not tested well
+  - The specs are easy to write and run fast
+- End-to-end (E2E) or acceptance
+  - Test focus on a feature and its interaction with the entire system
+    - Elements are tested together; the complete program is tested with a good deal of confidence
+    - The specs are hard to write, brittle and run slow
+
+---
+Test-Driven Development (TDD)
+Write the test before write the code
+          Red
+        /    \
+Refactor  --  Green
+- Red, write failed test
+- Green, make the test pass
+- Refactor, make code cleaner
+
+
