@@ -1,4 +1,6 @@
-RSpec.describe Array do 
+require 'rspec'
+
+RSpec.describe Array do
   it 'should start off empty' do 
     puts subject 
     puts subject.class 
