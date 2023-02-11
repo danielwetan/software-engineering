@@ -55,3 +55,7 @@ Refactor  --  Green
 - Refactor, make code cleaner
 
 
+
+---
+- Memoization using Rspec let
+- Lazy loading, load when needed

@@ -10,12 +10,27 @@ end
 # https://relishapp.com/rspec/rspec-core/v/3-8/docs/example-groups/basic-structure-describe-it
 RSpec.describe Card do
   # run ruby block before each test
+  # load every time without lazy loading
   # before do 
   #   @card = Card.new('Ace', 'Spade')
   # end
+  
+  # test helper
+  # def card 
+  #   Card.new('Ace', 'Spade')
+  # end
 
-  def card 
-    Card.new('Ace', 'Spade')
+  # memoization with rspec 'let'
+  # lazy loading, load when needed
+  let(:card) { Card.new('Ace', 'Spade') }
+  let(:x) { 1 + 1}
+  let(:y) { x + 10}
+
+  # let with bang, before example run ruby block below
+  # let!(:card) { Card.new('Ace', 'Spade') }
+
+  it 'testing rspec let' do 
+    puts y
   end
   
   it 'has a rank that rank can change' do 
