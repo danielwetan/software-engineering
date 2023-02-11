@@ -1,3 +1,11 @@
+class Card 
+  attr_reader :type 
+
+  def initialize(type)
+    @type = type 
+  end
+end
+
 # https://relishapp.com/rspec/rspec-core/v/3-8/docs/example-groups/basic-structure-describe-it
 RSpec.describe 'Card' do
   it 'has a type ' do
