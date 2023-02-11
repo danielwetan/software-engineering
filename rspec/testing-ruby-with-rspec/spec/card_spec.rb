@@ -1,5 +1,5 @@
 class Card 
-  attr_reader :rank, :suit
+  attr_accessor :rank, :suit
 
   def initialize(rank, suit)
     @rank = rank 
@@ -18,8 +18,11 @@ RSpec.describe Card do
     Card.new('Ace', 'Spade')
   end
   
-  it 'has a rank' do 
+  it 'has a rank that rank can change' do 
     expect(card.rank).to eq('Ace')
+
+    card.rank = 'Queen'
+    expect(card.rank).to eq('Queen')
   end
 
   it 'has a suit' do
