@@ -14,7 +14,7 @@ RSpec.describe 'regular hooks' do
   after(:context) do
     puts 'B'
   end
- 
+
   it 'should compare strings' do
     expect('hello').to eq('hello')
   end
