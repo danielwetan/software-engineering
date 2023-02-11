@@ -59,3 +59,11 @@ Refactor  --  Green
 ---
 - Memoization using Rspec let
 - Lazy loading, load when needed
+
+The let method object will persist and be cached within the SAME example instead of example group. RSpec will evaluate the let block again to ensure isolation between test.
+
+Lazy loaded
+-> Load resource only when needed
+
+Memoization
+-> Caching the result of a computationally expensive operation to reuse it later
