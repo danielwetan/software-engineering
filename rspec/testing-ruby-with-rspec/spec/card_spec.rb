@@ -23,8 +23,8 @@ RSpec.describe Card do
   # memoization with rspec 'let'
   # lazy loading, load when needed
   let(:card) { Card.new('Ace', 'Spade') }
-  let(:x) { 1 + 1}
-  let(:y) { x + 10}
+  let(:x) { 1 + 1 }
+  let(:y) { x + 10 }
 
   # let with bang, before example run ruby block below
   # let!(:card) { Card.new('Ace', 'Spade') }
