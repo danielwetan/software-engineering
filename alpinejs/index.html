@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <h2>HTML Forms</h2>
+  <form action="/action_page.php" x-data="{ firstname: '', lastname: '' }">
+    <label>First name</label><br>
+    <div>
+      <input type="text" x-model="firstname"><br>
+      <small style="color: red" :hidden="firstname.length > 0">Must be filled</small><br></br>
+    </div>
+
+    <label>Last name</label><br>
+    <div>
+      <input type="text" x-model="lastname"><br>
+      <small style="color: red" :hidden="lastname.length > 0">Must be filled</small><br></br>
+    </div>
+
+    <input type="submit" value="Submit" :disabled="firstname.length == 0 || lastname.length == 0"
+      x-on:click="console.log('submited')">
+  </form>
+</body>
+
+</html>
