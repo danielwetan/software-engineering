@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: 'Sora', sans-serif;
+  line-height: 1.5;
+}
+
+h2.card-title {
+  font-size: 1.125rem; /* 18px */
+  margin-bottom: 10px;
+}
+
+p.card-text {
+  font-size: 0.875rem; /* 14px */
+}
+
+.small-text {
+  font-size: 0.625rem; /* 10px */
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
