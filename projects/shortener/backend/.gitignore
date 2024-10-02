@@ -1,0 +1,13 @@
+.env
+
+.vscode
+vendor
+
+# debug folder & file
+debug
+__*
+
+*.out
+
+# build files
+main
