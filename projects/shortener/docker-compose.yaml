@@ -1,0 +1,60 @@
+version: "3"
+
+services:
+  webapp:
+    build: ./webapp
+    volumes:
+      - .:/webapp
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./backend
+    volumes:
+      - .:/backend
+    ports:
+      - "8000:8000"
+
+  mysql:
+    image: mysql:8.0.32
+    restart: always
+    ports:
+      - "3306:3306"
+    command:
+      [
+        "--default_authentication_plugin=mysql_native_password",
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_unicode_ci",
+      ]
+    volumes:
+      - shortener_mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "pass"
+
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - shortener_redis:/data
+
+  mongodb:
+    image: mongo:6.0.16
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - shortener_mongo:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "root"
+      MONGO_INITDB_ROOT_PASSWORD: "pass"
+
+volumes:
+  shortener_mysql:
+    driver: local
+  shortener_redis:
+    driver: local
+  shortener_mongo:
+    driver: local
