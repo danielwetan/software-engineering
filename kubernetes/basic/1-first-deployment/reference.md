@@ -1,0 +1,1 @@
+https://spacelift.io/blog/kubernetes-deployment-yaml
