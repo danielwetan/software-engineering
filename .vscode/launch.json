@@ -5,12 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "LoadBalancerApp",
+      "request": "launch",
+      "mainClass": "com.danielwetan.softwareengineering.loadbalancer.LoadBalancerApp",
+      "projectName": "loadbalancer"
+    },
+    {
       "name": "Launch file",
       "type": "go",
       "request": "launch",
       "mode": "debug",
       "program": "${file}",
       "dlvFlags": ["--check-go-version=false"]
-    },    
+    }
   ]
 }
