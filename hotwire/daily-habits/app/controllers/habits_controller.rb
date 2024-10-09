@@ -7,12 +7,14 @@ class HabitsController < ApplicationController
 
   def plus 
     @habit.update(count: @habit.count + 1)
-    redirect_to @habit
+    # redirect_to @habit
+    render :result
   end
 
   def minus 
     @habit.update(count: @habit.count - 1)
-    redirect_to @habit
+    # redirect_to @habit
+    render :result
   end
 
   private 
