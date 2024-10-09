@@ -1,0 +1,1 @@
+https://courses.writesoftwarewell.com/courses/hotwire-handbook
