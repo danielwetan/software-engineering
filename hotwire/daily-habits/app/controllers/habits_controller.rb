@@ -2,14 +2,13 @@ class HabitsController < ApplicationController
   before_action :set_habit 
 
   def show
-    @habit = Habit.first
   end
 
   def plus 
     @habit.update(count: @habit.count + 1)
 
     Turbo::StreamsChannel.broadcast_replace_to(
-      "success_action",
+      "success_action_#{@habit.id}",
       target: "success-message",
       template: "habits/success_perform_plus",
       layout: false,
@@ -23,7 +22,7 @@ class HabitsController < ApplicationController
     @habit.update(count: @habit.count - 1)
 
     Turbo::StreamsChannel.broadcast_replace_to(
-      "success_action",
+      "success_action_#{@habit.id}",
       target: "success-message",
       template: "habits/success_perform_minus",
       layout: false,
