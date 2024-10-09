@@ -11,3 +11,8 @@
 <div class="mt-3 p-2 flex justify-center space-x-1">
   <%= render 'habit_markers', habit: @habit %>
 </div>
+
+
+<%= turbo_stream_from "success_action" %>
+<div id="success-message">
+</div>
