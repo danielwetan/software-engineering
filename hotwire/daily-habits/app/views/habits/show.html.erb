@@ -1,3 +1,5 @@
+<%= turbo_stream_from "success_action" %>
+
 <div class="text-center font-bold text-gray-700 " id="habit-name">
   <%= @habit.name %>
 </div>
@@ -12,7 +14,5 @@
   <%= render 'habit_markers', habit: @habit %>
 </div>
 
-
-<%= turbo_stream_from "success_action" %>
 <div id="success-message">
 </div>
