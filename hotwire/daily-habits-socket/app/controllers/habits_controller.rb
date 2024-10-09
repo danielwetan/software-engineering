@@ -10,12 +10,10 @@ class HabitsController < ApplicationController
     Turbo::StreamsChannel.broadcast_replace_to(
       "success_action_#{@habit.id}",
       target: "success-message",
-      template: "habits/success_perform_plus",
+      template: "habits/_habit",
       layout: false,
       locals: { habit: @habit }
     )
-
-    render :result
   end
 
   def minus 
@@ -24,11 +22,10 @@ class HabitsController < ApplicationController
     Turbo::StreamsChannel.broadcast_replace_to(
       "success_action_#{@habit.id}",
       target: "success-message",
-      template: "habits/success_perform_minus",
+      template: "habits/_habit",
       layout: false,
       locals: { habit: @habit }
     )
-    render :result
   end
 
   private 
