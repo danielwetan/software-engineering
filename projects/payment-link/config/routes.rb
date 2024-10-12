@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :transactions
+  resources :payments, only: [ :create ]  # Only need the create action for payments
 end
